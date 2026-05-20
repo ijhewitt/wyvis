@@ -1,0 +1,17 @@
+[project]
+name = "wyvis2"
+version = "0.1.0"
+description = "Python port of the wyvis 1D subglacial hydrology model (Hewitt 2013)."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "matplotlib>=3.7",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["wyvis_parameters", "wyvis_discretize", "wyvis_solve", "wyvis_plot"]

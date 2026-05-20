@@ -1,0 +1,16 @@
+# Pure-Python + binary wheels available on PyPI for all major architectures
+# (x86_64 + arm64 on Linux/macOS/Windows). Lower bounds chosen so that the
+# *first* version meeting them ships prebuilt wheels for Apple Silicon and
+# ARM Linux without needing a local C/Fortran toolchain.
+#
+# - numpy 1.23 is the first release with universal2 + manylinux_aarch64 wheels
+#   for Python 3.10–3.12. numpy 2.x adds Python 3.13 support; both are fine.
+# - scipy 1.11 ships manylinux_aarch64 + macosx_arm64 wheels for Py 3.10+.
+# - matplotlib 3.7 has prebuilt wheels for all the same triples.
+#
+# Upper bounds are open: the project does not use APIs removed in any current
+# release, and bumping floors here would just block valid installs.
+
+numpy>=1.23
+scipy>=1.11
+matplotlib>=3.7
